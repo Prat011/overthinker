@@ -1,0 +1,51 @@
+{
+  "name": "indiarag",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@ai-sdk/google": "^1.1.8",
+    "@ai-sdk/react": "^1.1.8",
+    "@google/generative-ai": "^0.21.0",
+    "@shadcn/ui": "^0.0.4",
+    "ai": "^3.2.22",
+    "cors": "^2.8.5",
+    "cra-template": "1.2.0",
+    "express": "^4.21.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^9.0.3",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "server": "node server.js",
+    "dev": "concurrently \"npm run start\" \"npm run server\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "proxy": "http://localhost:3001"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

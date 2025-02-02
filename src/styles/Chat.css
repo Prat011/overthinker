@@ -1,0 +1,176 @@
+/* Import Instrument Serif font */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+/* styles/Chat.css */
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/public/pink_wallpaper.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  width: 90%;
+  max-width: 700px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: min-height 0.3s ease-in-out;
+}
+
+.search-container.expanded {
+  min-height: 500px;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.search-header h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.search-header p {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.search-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.initial-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-results {
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+.search-message {
+  margin: 16px 0;
+  font-family: 'Instrument Serif', serif;
+}
+
+.search-message.user {
+  background: #eb5db2;
+  color: white;
+  border-radius: 18px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+}
+
+.search-message.bot {
+  background: #F2F2F7;
+  color: #1a1a1a;
+  border-radius: 18px;
+  padding: 12px 20px;
+}
+
+.search-input-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 24px;
+  border: 2px solid #E5E5EA;
+  border-radius: 16px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.2s ease;
+  font-family: 'Instrument Serif', serif;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #eb5db2;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.search-input::placeholder {
+  font-family: 'Instrument Serif', serif;
+  color: #999;
+}
+
+/* Loading animation */
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+  padding: 12px 20px;
+  align-items: center;
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  background: #999;
+  border-radius: 50%;
+  animation: typingAnimation 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingAnimation {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
+
+.chat-history-container {
+  height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  margin-top: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* For Webkit browsers like Chrome/Safari */
+.chat-history-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-history-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.chat-history-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.chat-history-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
